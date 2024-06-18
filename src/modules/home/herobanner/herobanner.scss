@@ -1,0 +1,323 @@
+@import '../../../style/main.scss';
+
+.herobanner {
+    background-color: var(--theme-blue-color);
+    width: 100%;
+    height: 100vh;
+    position: relative;
+    display: flex;
+    align-items: center;
+
+    @media (max-width: 768px){
+        padding: 80px 0;
+        height: auto;
+    }
+
+    .herobanner-blur-top-right {
+        background: var(--theme-blur-color1);
+        position: absolute;
+        width: 210px;
+        height: 180px;
+        top: 0;
+        right: 20%;
+        filter: blur(180px);
+    }
+
+    .herobanner-blur-top-left {
+        background: var(--theme-blur-color2);
+        position: absolute;
+        width: 65px;
+        height: 65px;
+        top: 100px;
+        filter: blur(40px);
+        left: 25%;
+    }
+
+    .herobanner-blur-bottom-left {
+        background: var(--theme-blur-color3);
+        position: absolute;
+        width: 50px;
+        height: 50px;
+        bottom: 70px;
+        filter: blur(25px);
+        left: 45%;
+    }
+
+    .herobanner-blur-bottom-right {
+        background: var(--theme-blur-color2);
+        position: absolute;
+        width: 100px;
+        height: 100px;
+        bottom: 70px;
+        filter: blur(70px);
+        right: 20%;
+    }
+
+    .herobanner-grid {
+        display: grid;
+        grid-template-columns: 720px 1fr;
+        gap: 50px;
+
+        @media (max-width: 768px) {
+            grid-template-columns: repeat(1, 1fr);
+        }
+
+        .herobanner-left-section {
+
+            .herobanner-left-section-one {
+
+                img {
+                    width: 110px;
+                    animation: topup 2s infinite;
+
+                    @keyframes topup {
+                        0% {
+                            transform: scale(1);
+                        }
+
+                        50% {
+                            transform: scale(1.4);
+                        }
+
+                        100% {
+                            transform: scale(1);
+                        }
+                    }
+                }
+            }
+
+        }
+
+        .herobanner-left-section-two {
+
+            h1 {
+                color: transparent;
+                @include header1;
+                font-weight: 600;
+                background: linear-gradient(278.36deg, #ff843f 27.38%, #fff 63.35%);
+                -webkit-background-clip: text;
+                -webkit-text-fill-color: transparent;
+                margin: 0 0 30px;
+
+                @media (max-width: 768px){
+                    @include header2;
+                    font-weight: 700;
+                    max-width: 700px;
+                }
+            }
+        }
+
+        .herobanner-left-section-three{
+
+            button{
+                display: flex;
+                align-items: center;
+                padding: 10px 20px;
+                border-radius: 15px;
+                border: 0px;
+                background: linear-gradient(269.99deg, #ec7c3e 15.27%, #e49061 117.7%);
+                color: #fff;
+                cursor: pointer;
+                transform: rotate(-5deg);
+                
+                span{
+                    font-weight: 500;
+                    letter-spacing: 1px;
+                    padding: 0 15px 0 0;
+                }
+                
+                img{
+                   height: 40px; 
+                }
+            }
+        }
+
+        .herobanner-left-section-four{
+
+            img{
+                padding: 40px 0 0 ;
+                animation: mask 2s infinite;
+            }
+
+            @keyframes mask{
+                0%{
+                    transform: rotate(0deg);
+                }
+
+                50%{
+                    transform: rotate(15deg);
+                }
+
+                100%{
+                    transform: rotate(0deg);
+                }
+            }
+        }
+
+        .herobanner-right-flex{
+            position: relative;
+            display: flex;
+            align-items: center;
+
+            @media (max-width:768px) {
+                justify-content: center;
+            }
+
+            .herobanner-right-img-one{
+                width: 150px;
+                position: relative;
+                animation: imgone 2s infinite;
+
+                @keyframes imgone {
+                    0% {
+                        transform: translateY(0);
+                    }
+
+                    50%{
+                        transform: translateY(10px);
+                    }
+
+                    100%{
+                        transform: translateY(0);
+                    }
+                }
+            }
+
+            .herobanner-right-img-two{
+                width: 250px;
+                position: relative;
+                top: 80px;
+                animation: imgone 2s infinite;
+
+                @keyframes imgone {
+                    0% {
+                        transform: translateY(0);
+                    }
+
+                    50%{
+                        transform: translateY(10px);
+                    }
+
+                    100%{
+                        transform: translateY(0);
+                    }
+                }
+            }
+
+            .herobanner-right-img-three{
+                background-image: url('../../../assets/image/slice1.png');
+                width: 65px;
+                height: 60px;
+                background-size: cover;
+                position: absolute;
+                bottom: 10%;
+
+                @media (max-width:768px) {
+                    bottom: 0%;
+                    left: 20%;
+                }
+            }
+
+            .herobanner-right-img-four{
+                background-image: url('../../../assets/image/ring1.png');
+                width: 35px;
+                height: 35px;
+                background-size: cover;
+                position: absolute;
+                bottom: 5%;   
+                right: 60%;
+
+                @media (max-width:768px) {
+                    left: 40%;
+                }
+            }
+
+            .herobanner-right-img-five{
+                background-image: url('../../../assets/image/fillround.png');
+                width: 36px;
+                height: 30px;
+                background-size: cover;
+                background-repeat: no-repeat;
+                position: absolute;
+                top: 12%;
+                right: 60%;
+                animation: imgtwo 2s infinite;
+
+                @media (max-width:768px) {
+                    left: 40%;
+                }
+
+                @keyframes imgtwo {
+                    0% {
+                        transform: translateY(0);
+                    }
+                    50% {
+                        transform: translateY(-10px);
+                    }
+                    100% {
+                        transform: translateY(0);
+                    }
+                }
+            }
+
+            .herobanner-right-img-six{
+                background-image: url('../../../assets/image/top.png');
+                width: 30px;
+                height: 35px;
+                background-size: cover;
+                background-repeat: no-repeat;
+                position: absolute;
+                right: 0%;
+                top: 30%;
+
+                @media (max-width:768px) {
+                    right: 15%;
+                }
+            }
+
+            .herobanner-right-img-seven{
+                background-image: url('../../../assets/image/right-lol.png');
+                width: 51px;
+                height: 51px;
+                background-size: cover;
+                animation: topup 2s infinite;
+                top: 110%;
+                left: 20%;
+                position: absolute;
+
+                @media (max-width:768px) {
+                    top: 90%;
+                    left: 0%;
+                }
+            }
+        }
+    }
+
+    .herobanner-rigth-image{
+        background-image: url('../../../assets/image/hero-top.png');
+        height: 84px;
+        width: 84px;
+        background-size: cover;
+        right: 10%;
+        position: absolute;
+        top: 10%;
+        animation: hero-right 2s infinite;
+
+        @media (max-width: 768px){
+            right: 5%;
+            top: 7%;
+        }
+
+        @keyframes hero-right {
+            0%{
+                transform: rotate(0deg);
+            }
+            50%{
+                transform: rotate(15deg);
+            }
+            100%{
+                transform: rotate(0deg);
+            }
+        }
+    }
+}

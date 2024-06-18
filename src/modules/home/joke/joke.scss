@@ -1,0 +1,218 @@
+@import '../../../style/main.scss';
+
+.joke {
+    padding: 140px 0;
+    position: relative;
+
+    .joke-blur {
+        display: flex;
+        justify-content: flex-end;
+
+        .joke-blur-dot {
+            width: 170px;
+            height: 155px;
+            background: var(--theme-blur-color1);
+            position: absolute;
+            top: 0;
+            filter: blur(130px);
+        }
+
+    }
+
+    .joke-grid {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 30px;
+        align-items: center;
+
+        @media (max-width: 768px) {
+            grid-template-columns: repeat(1,1fr);
+        }
+
+        .joke-left-part-one {
+            max-width: 100%;
+            margin: 0 0 10px;
+
+            img {
+                animation: joke-one 2s infinite;
+
+                @keyframes joke-one {
+                    0% {
+                        transform: scale(1);
+                    }
+
+                    50% {
+                        transform: scale(1.4);
+                    }
+
+                    100% {
+                        transform: scale(1);
+                    }
+                }
+            }
+        }
+
+        .joke-left-part-two {
+
+            h1 {
+                @include header1;
+                font-weight: 700;
+                width: 690px;
+                letter-spacing: -1.5px;
+                margin: 0 0 20px;
+
+                @media (max-width: 768px) {
+                    max-width: 550px;
+                }
+            }
+        }
+
+        .joke-left-part-three{
+
+            p{
+                color: var(--theme-gray-text-color);
+                padding: 10px 0;
+                max-width: 620px;
+                line-height: 25px;
+            }
+        }
+
+        .joke-left-part-four{
+            margin: 10px 0 0 300px;
+        }
+
+        .joke-left-part-five{
+
+            button{
+                display: flex;
+                align-items: center;
+                padding: 10px 30px;
+                border-radius: 15px;
+                border: 0px;
+                background: linear-gradient(271.4deg, #4c3eec -12.37%, #3e2df7 116.08%);
+                color: #fff;
+                cursor: pointer;
+                transform: rotate(-5deg);
+                
+                span{
+                    font-weight: 500;
+                    letter-spacing: 1px;
+                    padding: 0 15px 0 0;
+                }
+                
+                img{
+                   height: 40px; 
+                }
+            }
+        }
+
+        .joke-right-part-one{
+            @media (max-width: 768px) {
+                display: flex;
+                justify-content: center;
+            }
+
+            img{
+                width: 420px;
+                height: 420px;
+                animation: joke-right 2s infinite;
+
+
+                @keyframes joke-right {
+                    0%{
+                        transform: scale(1);
+                    }
+                    50%{
+                        transform: scale(1.1);
+                    }
+                    100%{
+                        transform: scale(1);
+                    }
+                }
+            }
+        }
+
+        .joke-right-part-two{
+            background-image: url('../../../assets/image/joke-triangle.png');
+            height: 70px;
+            width: 70px;
+            background-size: cover;
+            background-repeat: no-repeat;
+            position: absolute;
+            top: 25%;
+            right: 14%;
+            animation: joke-left-triangle 2s infinite;
+
+            @media (max-width: 768px) {
+                top: 5%;
+            }
+
+            @keyframes joke-left-triangle {
+                0%{
+                    transform: translateY(0);
+                }
+                50%{
+                    transform: translateY(10px);
+                }
+                0%{
+                    transform: translateY(0);
+                }
+            }
+        }
+
+        .joke-right-part-three{
+            background-image: url('../../../assets/image/slice1.png');
+            height: 40px;
+            width: 45px;
+            background-size: cover;
+            background-repeat: no-repeat;
+            position: absolute;
+            top: 28%;
+            right: 38%;
+
+            @media (max-width: 768px) {
+                left: 20%;    
+                top: 15%;
+            }
+        }
+
+        .joke-right-part-four{
+            background-image: url('../../../assets/image/joke-round-d.png');
+            width: 45px;
+            height: 47px;
+            background-size: cover;
+            background-repeat: no-repeat;
+            position: absolute;
+            top: 50%;
+            right: 43%;
+
+            @media (max-width: 768px) {
+                left: 10%;
+                top: 60%;    
+            }
+        }
+
+        .joke-right-part-five{
+            background-image: url('../../../assets/image/ring1.png');
+            width: 35px;
+            height: 35px;
+            background-size: cover;
+            background-repeat: no-repeat;
+            position: absolute;
+            bottom: 23%;
+            right: 35%;
+
+            @media (max-width: 768px) {
+                bottom: 0%;
+                left: 30%;
+            }
+        }
+
+        .joke-gri-part-two{
+
+            @media (max-width: 768px) {
+                position: relative;
+            }
+        }
+    }
+}

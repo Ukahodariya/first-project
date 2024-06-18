@@ -1,0 +1,112 @@
+@import '../../../style/main.scss';
+
+.life{
+    margin: 100px 0;
+    position: relative;
+
+    @media (max-width: 768px) {
+        margin: 0 0 70px;           
+    }
+
+    .life-text-section{
+        text-align: center;
+
+        .life-text-section-one{
+
+            h1{
+                @include header2;
+                font-weight: 700;
+                letter-spacing: -1.5px;
+            }
+        }
+
+        .life-text-section-two{
+
+            p{
+                color: var(--theme-gray-text-color);
+                padding: 40px 270px 35px 270px;
+                line-height: 25px;
+
+                @media (max-width: 768px) {
+                    padding: 30px 0 ;
+                }
+            }
+        }
+    }
+
+    .life-img-section{
+        display: flex;
+        justify-content: center;
+
+        .life-img-section-one{
+            position: relative;
+
+            img{
+                width: 440px;
+                height: 330px;
+            }
+        }
+
+        .life-img-section-two{
+            background-image: url('../../../assets/image/life-slice.png');
+            width: 48px;
+            height: 45px;
+            background-size: cover;
+            background-repeat: no-repeat;
+            position: absolute;
+            top: 40%;
+            left: 25%;
+
+            @media (max-width: 768px) {
+                left: 20%;
+                top: 45%;    
+            }
+        }
+
+        .life-img-section-three{
+            background-image: url('../../../assets/image/life-donut.png');
+            width: 42px;
+            height: 42px;
+            background-repeat: no-repeat;
+            background-size: cover;
+            position: absolute;
+            bottom: 15%;
+            left: 28%;
+
+            @media (max-width: 768px) {
+                left: 20%;
+            }
+        }
+
+        .life-img-section-four{
+            background-image: url('../../../assets/image/life-fill-round.png');
+            width: 32px;
+            height: 32px;
+            background-repeat: no-repeat;
+            background-size: cover;
+            position: absolute;
+            top: 45%;
+            right: 33%;
+
+            @media (max-width: 768px) {
+                top: 55%;
+                right: 16%;    
+            }
+        }
+
+        .life-img-section-five{
+            background-image: url('../../../assets/image/life-half.png');
+            width: 35px;
+            height: 32px;
+            background-repeat: no-repeat;
+            background-size: cover;
+            position: absolute;
+            bottom: 0%;
+            right: 35%;
+
+            @media (max-width: 768px) {
+                right: 22%;    
+            }
+        }
+    }
+}

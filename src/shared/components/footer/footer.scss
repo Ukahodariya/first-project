@@ -1,0 +1,34 @@
+@import '../../../style/main.scss';
+
+.footer {
+    background-color: var(--theme-blue-color);
+    padding: 60px 0 0;
+
+    .footer-top {
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        text-align: center;
+
+        .footer-text-one {
+            color: var(--theme-orange-color);
+            @include header4;
+            margin: 10px 0;
+        }
+
+        .footer-text-two {
+            color: var(--theme-text-gray);
+            width: 280px;
+        }
+    }
+
+    .footer-main-img {
+        margin: 100px 0 0;
+
+        img{
+            height: 300px;
+            width: 100%;
+            object-fit: cover;
+        }
+    }
+}
